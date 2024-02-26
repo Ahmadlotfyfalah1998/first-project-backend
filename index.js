@@ -1,6 +1,6 @@
 import express from 'express'; 
 
-import { PORT, dbUrl } from './config.js';
+import { PORT } from './config.js';
 import mongoose from 'mongoose';
 import {Task} from './models/todoModels.js'
 import tasksRoutes from "./routes/tasksRoutes.js"
