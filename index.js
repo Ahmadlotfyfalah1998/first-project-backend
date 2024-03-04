@@ -2,7 +2,7 @@ import express from 'express';
 
 import { PORT } from './config.js';
 import mongoose from 'mongoose';
-import {Task} from './models/taskModels.js'
+
 import tasksRoutes from "./routes/tasksRoutes.js"
 import userRoutes from './routes/userRoutes.js';
 import cors from 'cors'
