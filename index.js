@@ -4,6 +4,7 @@ import { PORT } from './config.js';
 import mongoose from 'mongoose';
 import {Task} from './models/todoModels.js'
 import tasksRoutes from "./routes/tasksRoutes.js"
+import userRoutes from './routes/userRoutes.js';
 import cors from 'cors'
 import dotenv from 'dotenv';
 dotenv.config();
@@ -21,6 +22,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/tasks',tasksRoutes)
+app.use('/users', userRoutes);
 mongoose.connect(mongoDBConnectionString, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
   console.log('connected')
