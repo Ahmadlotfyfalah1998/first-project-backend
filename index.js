@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/tasks',tasksRoutes)
-mongoose.connect(mongoDBConnectionString)
+mongoose.connect(mongoDBConnectionString, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
   console.log('connected')
   app.listen(PORT, () => {
